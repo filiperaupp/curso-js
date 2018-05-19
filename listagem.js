@@ -1,45 +1,24 @@
-primeiroPedido = {
-    nome: 'Luciel, Karine, Vicente',
-    pedidos: [
-        {
-            nome: "Alaminuta",
-            quantidade: 2,
-            frango: 3,
-            carne: 1,
-            ovo: 4,
-            valor: 25
-        },
-        {
-            nome: "Batata Frita",
-            quantidade: 1,
-            valor: 12
-        }
-    ]
-};
-
-segundoPedido = {
-    nome: 'Arthur, Raphael, Filipe, Guilindo',
-    pedidos: [
-        {
-            nome: "Alaminuta",
-            quantidade: 2,
-            frango: 3,
-            carne: 1,
-            ovo: 4,
-            valor: 25
-        },
-        {
-            nome: "Batata Frita",
-            quantidade: 1,
-            valor: 12
-        }
-    ]
+primeiroJogo = {
+    nome: "The Witcher III",
+    valor: 100
 }
 
-pedido = [primeiroPedido, segundoPedido]
-
-let soma = 0;
-for(let i=0; i < pedido.length;i = i+1){
-    let objeto_pedido = pedido[i];
-    console.log(objeto_pedido.nome, `Eu to no loop ${i+1}`);
+segundoJogo = {
+    nome: "FIFA 18",
+    valor: 150
 }
+
+listaJogos = [primeiroJogo,segundoJogo]
+
+let total = 0;
+
+for (let indice=0; indice < listaJogos.length; indice++) {
+    total = soma(total,listaJogos[indice].valor);
+}
+
+function soma(x1,x2) {
+    return x1+x2;
+}
+
+console.log(`Valor total dos jogos: ${total}`)
+
